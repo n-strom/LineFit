@@ -21,3 +21,15 @@ intercept = params[1]
 #EXCERCISE 1
 
 print(print_equation(slope, intercept, data[0,2], data[0,0]))
+#The equation of the line is: y =  -0.005218172899576858 height (mm)/mass (g) x +  6.073048655438714 mass (g)
+#None
+
+#EXCERCISE 2
+
+plt.figure()
+plt.scatter(x, y, label='Data')
+plt.plot(x, linear(x, slope, intercept),label='Linear Fit')
+plt.legend(loc='best')
+plt.xlabel("Mass (g)")
+plt.ylabel("Height (cm)")
+plt.show()
