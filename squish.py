@@ -6,15 +6,18 @@ from fitting_functions import *
 
 data = np.loadtxt("MCSV.csv", delimiter=",", dtype=str)
 
-print(data[0])
+#print(data[0])
 
 x = data[1:, 0].astype (np.float32)
 y = data[1:, 2].astype (np.float32)
 
-print("y =", y)
-print("x =", x)
+#print("y =", y)
+#print("x =", x)
 
 params, params_cov = scipy.optimize.curve_fit(linear, x, y)
 slope = params[0]
-intercept = params[2]
+intercept = params[1]
 
+#EXCERCISE 1
+
+print(print_equation(slope, intercept, data[0,2], data[0,0]))
